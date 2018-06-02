@@ -6,7 +6,7 @@
   6
   7 url = sys.argv[1]
   8 encurl = urllib.parse.quote(url, safe='')
-  9 resp = urllib.request.urlopen('http://b.hatena.ne.jp/entry/jsonlite/' + encu    rl)
+  9 resp = urllib.request.urlopen('http://b.hatena.ne.jp/entry/jsonlite/' + encurl)
  10 b64str = resp.read()
  11 bkmstr = b64str.decode()
  12 bkminfo = json.loads(bkmstr)
